@@ -6,14 +6,13 @@ import {
   FlexContainer,
   Heading,
   ParaText,
-  BlueText,
   IconContainer,
   
 } from "../../styles/Global.styled";
 
 import { FaGithub } from "react-icons/fa";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
-import Project1 from "../../assets/Project1.png";
+// import Project1 from "../../assets/Project1.png";
 
 import {
   TechStackCard,
@@ -26,8 +25,6 @@ import {
   PButton,
   Overlay,
 } from "../../styles/MyProjects.styled";
-
-import { fadeInLeftVariant, fadeInRightVariant, fadeInBottomVariant } from "../../utils/Variants";
 
 
 const Projects = ({ data }) => {
@@ -81,7 +78,7 @@ const Projects = ({ data }) => {
     };
 
     return cleanup;
-
+// eslint-disable-next-line
   }, [isFlipped]);
 
 
@@ -119,10 +116,10 @@ const Projects = ({ data }) => {
 
           <FlexContainer align="center" justify="space-between" responsiveFlex>
         <PaddingContainer right="1rem" bottom="1rem">
-          <PButton>Live</PButton>  
+        <PButton href={data.project_url || "#"} target={data.project_url && "_blank"} style={{textDecoration: "none"}}>Live</PButton>  
         </PaddingContainer>
         <PaddingContainer right="1rem" bottom="1rem">
-          <PButton>Code</PButton>
+        <PButton href={data.code_url || "#"} target={data.code_url && "_blank"} style={{textDecoration: "none"}}>Code</PButton>
         </PaddingContainer>
         </FlexContainer>
 
@@ -135,8 +132,8 @@ const Projects = ({ data }) => {
         <ProjectImageContainer justify="center">
           <ProjectImage src={data.project_img} alt={data.project_name} />
           <Overlay>
-          <PButton>Live</PButton>
-          <PButton>Code</PButton>
+          <PButton href={data.project_url || "#"} target={data.project_url && "_blank"} style={{textDecoration: "none"}}>Live</PButton>
+          <PButton href={data.code_url || "#"} target={data.code_url && "_blank"} style={{textDecoration: "none"}}>Code</PButton>
           </Overlay>
 
           <WaveClip viewBox="0 -280 700 600" preserveAspectRatio="none">
@@ -154,7 +151,7 @@ const Projects = ({ data }) => {
             </Heading>
 
             <IconContainer color="blue" top="1rem" size="1.5rem">
-              <FaGithub />
+            <a href={data.code_url || "#"} target={data.code_url && "_blank"} rel="noreferrer" style={{textDecoration: "none", color: "inherit"}}><FaGithub /></a>
             </IconContainer>
           </FlexContainer>
 

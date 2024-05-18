@@ -5,7 +5,6 @@ import {
     PaddingContainer,
     FlexContainer,
     Heading,
-    ParaText,
     BlueText,
     IconContainer,
 } from '../styles/Global.styled';
@@ -17,7 +16,7 @@ import {
 } from '../styles/MySkills.styled';
 
 import { Skills } from '../utils/Data';
-import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from "../utils/Variants";
+import { fadeInLeftVariant, fadeInTopVariant } from "../utils/Variants";
 
 
 
@@ -25,7 +24,7 @@ const MySkills = () => {
 
   useEffect(() => {
     const di = document.querySelectorAll('.cont');
-    const card = document.querySelectorAll('.cards');
+    // const card = document.querySelectorAll('.cards');
     // console.log(di[0].getBoundingClientRect());
     // console.log(card);
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IconContainer } from "./Global.styled";
+// import { IconContainer } from "./Global.styled";
 
 export const AboutCard = styled.div`
   width: 230px;

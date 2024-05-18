@@ -4,18 +4,12 @@ import {motion} from 'framer-motion';
 import {
     PaddingContainer,
     FlexContainer,
-    Heading,
-    ParaText,
-    BlueText,
-    IconContainer,
-    Button,
-    Container
 } from '../../styles/Global.styled';
 
 import { AiOutlineClose } from 'react-icons/ai';
 import { MenuIcon, NavMenuContainer, MenuItem } from '../../styles/Navbar.styled';
 import { navLinks } from '../../utils/Data';
-import { slideInLeft, slideInRight } from "../../utils/Variants";
+import { slideInRight } from "../../utils/Variants";
 
 
 

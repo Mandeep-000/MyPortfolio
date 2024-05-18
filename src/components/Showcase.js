@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {ReactTyped} from 'react-typed';
 
@@ -17,10 +17,9 @@ import {
   Particle,
 } from "../styles/Showcase.styled";
 
-import { BsLinkedin, BsTwitter, BsYoutube, BsInstagram } from "react-icons/bs";
+import { BsLinkedin, BsYoutube } from "react-icons/bs";
 import { FaGithub } from 'react-icons/fa';
 
-import ShowcaseImg from "../assets/showcase-img.png";
 import ShowcaseImg2 from "../assets/showcase-img2.svg";
 import BackgroundImg from "../assets/particle.png";
 

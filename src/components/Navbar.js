@@ -4,11 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   PaddingContainer,
   FlexContainer,
-  Heading,
-  ParaText,
   BlueText,
-  IconContainer,
-  Button,
   Container,
 } from "../styles/Global.styled";
 

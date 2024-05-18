@@ -8,12 +8,10 @@ import {
   ParaText,
   BlueText,
   IconContainer,
-  Button,
   HorizontalLine,
 } from "../styles/Global.styled";
 
-import { ContactForm, FormInput, FormLabel } from "../styles/Footer.styled";
-import { fadeInBottomVariant, fadeInTopVariant, fadeInLeftVariant, fadeInRightVariant } from "../utils/Variants";
+import { fadeInLeftVariant, fadeInRightVariant } from "../utils/Variants";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 
@@ -107,7 +105,7 @@ const Footer = () => {
                 left="1rem"
                 right="1rem"
               >
-                github/mandeep-pareek
+                github.com/mandeep-000
               </ParaText>
             </FlexContainer>
           </PaddingContainer>
@@ -119,7 +117,7 @@ const Footer = () => {
 
 export default Footer;
 
-{
+
   /* <ContactForm
   as={motion.form}
   variants={fadeInBottomVariant}
@@ -148,4 +146,4 @@ export default Footer;
     <Button>Send Message</Button>
   </FlexContainer>
 </ContactForm> */
-}
+

@@ -5,15 +5,13 @@ import {
     PaddingContainer,
     FlexContainer,
     Heading,
-    ParaText,
     BlueText,
-    IconContainer,
 } from '../styles/Global.styled';
 
 import Project from './layouts/Projects';
 
 import { Projects } from '../utils/Data';
-import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from "../utils/Variants";
+import { fadeInTopVariant } from "../utils/Variants";
 
 
 

@@ -10,11 +10,6 @@ import {
   IconContainer,
 } from "../styles/Global.styled";
 
-import {
-  ShowcaseImageCard,
-  ShowcaseParticleContainer,
-  Particle,
-} from "../styles/Showcase.styled";
 
 import {
   AboutCard,
@@ -22,12 +17,8 @@ import {
   TextCard,
 } from "../styles/About.styled";
 
-import AboutImg from "../assets/about-left.svg";
-import AboutImg1 from "../assets/about-left - Copy.svg";
-import AboutImg2 from "../assets/about-left2.svg";
-import AboutImg3 from "../assets/about-img2.png";
-import AboutImg4 from "../assets/about-img2.svg";
 
+import AboutImg1 from "../assets/about-left - Copy.svg";
 import { fadeInLeftVariant, fadeInTopVariant, fadeInRightVariant } from "../utils/Variants";
 import { GiGraduateCap } from "react-icons/gi";
 import { FaCode } from "react-icons/fa";
