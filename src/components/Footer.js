@@ -12,8 +12,7 @@ import {
 } from "../styles/Global.styled";
 
 import { fadeInLeftVariant, fadeInRightVariant } from "../utils/Variants";
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import { IoMdMail } from "react-icons/io";
+import { Social } from "../utils/Data";
 
 const Footer = () => {
   return (
@@ -46,49 +45,8 @@ const Footer = () => {
               variants={fadeInRightVariant}
               initial="hidden"
               whileInView="visible" top="1rem" responsiveTop="1rem">
-            <FlexContainer align="center" responsiveFlex>
-              <IconContainer
-                top="1rem"
-                left="0.5rem"
-                right="0.5rem"
-                color="blue"
-                size="1.5rem"
-              >
-                <IoMdMail />
-              </IconContainer>
-              <ParaText
-                className="rel"
-                bottom="0.5rem"
-                top="1rem"
-                left="1rem"
-                right="1rem"
-              >
-                p.mandeep0402@gmail.com
-              </ParaText>
-            </FlexContainer>
 
-            
-            <FlexContainer align="center" responsiveFlex>
-              <IconContainer
-                top="1rem"
-                left="0.5rem"
-                right="0.5rem"
-                color="blue"
-                size="1.4rem"
-              >
-                <SiLinkedin />
-              </IconContainer>
-              <ParaText
-                className="rel"
-                bottom="0.5rem"
-                top="1rem"
-                left="1rem"
-                right="1rem"
-              >
-                linkedin.com/in/mandeep-pareek
-              </ParaText>
-            </FlexContainer>
-            <FlexContainer align="center" responsiveFlex>
+                {Social.map((social)=>(<FlexContainer align="center" responsiveFlex>
               <IconContainer
                 top="1rem"
                 left="0.5rem"
@@ -96,7 +54,14 @@ const Footer = () => {
                 color="blue"
                 size="1.5rem"
               >
-                <SiGithub />
+                <a
+                  href={social.path || "#"}
+                  target={social.path && "_blank"}
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {social.icon}
+                </a>
               </IconContainer>
               <ParaText
                 className="rel"
@@ -105,9 +70,17 @@ const Footer = () => {
                 left="1rem"
                 right="1rem"
               >
-                github.com/mandeep-000
+                <a
+                  href={social.path || "#"}
+                  target={social.path && "_blank"}
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {social.text}
+                </a>
               </ParaText>
-            </FlexContainer>
+            </FlexContainer>))}
+
           </PaddingContainer>
         </FlexContainer>
       </PaddingContainer>

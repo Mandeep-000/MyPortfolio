@@ -46,7 +46,7 @@ const Navbar = () => {
           <FlexContainer justify="space-between" align="center" responsiveFlex>
             {/* --Left-Logo-- */}
             <Logo>
-              JustA<BlueText>Dev</BlueText>
+            Port<BlueText>Folio</BlueText>
             </Logo>
 
             {/* --Right-Menu-Icon-- */}

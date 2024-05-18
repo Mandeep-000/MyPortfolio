@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {ReactTyped} from 'react-typed';
+import { ReactTyped } from "react-typed";
 
 import {
   PaddingContainer,
@@ -8,7 +8,7 @@ import {
   Heading,
   ParaText,
   BlueText,
-  IconContainer
+  IconContainer,
 } from "../styles/Global.styled";
 
 import {
@@ -17,16 +17,16 @@ import {
   Particle,
 } from "../styles/Showcase.styled";
 
-import { BsLinkedin, BsYoutube } from "react-icons/bs";
-import { FaGithub } from 'react-icons/fa';
+// import { BsLinkedin } from "react-icons/bs";
+// import { FaGithub } from 'react-icons/fa';
 
 import ShowcaseImg2 from "../assets/showcase-img2.svg";
 import BackgroundImg from "../assets/particle.png";
 
 import { fadeInLeftVariant, fadeInRightVariant } from "../utils/Variants";
+import { Social } from "../utils/Data";
 
 const Showcase = () => {
-
   return (
     <PaddingContainer
       id="Home"
@@ -38,7 +38,12 @@ const Showcase = () => {
       responsiveRight="1rem"
       responsiveTop="8rem"
     >
-      <FlexContainer align="left" gap="6rem" responsiveDirection="column-reverse" fullWidthChild>
+      <FlexContainer
+        align="left"
+        gap="6rem"
+        responsiveDirection="column-reverse"
+        fullWidthChild
+      >
         {/* --left-content-- */}
         <motion.div
           variants={fadeInLeftVariant}
@@ -54,36 +59,37 @@ const Showcase = () => {
           </Heading>
 
           <Heading as="h3" size="h3">
-            I'm a <BlueText>
+            I'm a{" "}
+            <BlueText>
               <ReactTyped
-                strings={[
-                  "Student",
-                  "Web Developer",
-                  "Learner",
-                ]}
+                strings={["Student", "Web Developer", "Learner"]}
                 typeSpeed={180}
                 backSpeed={100}
-                loop></ReactTyped>
+                loop
+              ></ReactTyped>
             </BlueText>
           </Heading>
 
           <ParaText as="p" top="2rem" bottom="4rem">
-            Hello, My name is Mandeep Pareek and I'm Full Stack Developer and Learner, eager to grasp new knowledge. I have project experience in creating and designing user-friendly websites and web applications.
+            Hello, My name is Mandeep Pareek and I'm Full Stack Developer and
+            Learner, eager to grasp new knowledge. I have project experience in
+            creating and designing user-friendly websites and web applications.
           </ParaText>
 
           {/* --Social-Icons-- */}
-          <FlexContainer gap="20px" responsiveFlex>
-            <IconContainer color="blue" size="1.5rem">
-              <BsLinkedin />
-            </IconContainer>
-
-            <IconContainer color="blue" size="1.5rem">
-              <BsYoutube />
-            </IconContainer>
-
-            <IconContainer color="blue" size="1.5rem">
-              <FaGithub />
-            </IconContainer>
+          <FlexContainer gap="20px" responsiveFlex style={{zIndex: 5, position: "relative"}}>
+            {Social.map((social) => (
+              <IconContainer color="blue" size="1.5rem">
+                <a
+                  href={social.path || "#"}
+                  target={social.path && "_blank"}
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {social.icon}
+                </a>
+              </IconContainer>
+            ))}
           </FlexContainer>
         </motion.div>
 
@@ -118,16 +124,16 @@ const Showcase = () => {
               rotate="60deg"
             />
             <Particle
-                as={motion.img}
-                animate={{
-                  y: [0, 100, 0],
-                  rotate: 360,
-                  scale: [1, 0.8, 1],
-                }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                }}
+              as={motion.img}
+              animate={{
+                y: [0, 100, 0],
+                rotate: 360,
+                scale: [1, 0.8, 1],
+              }}
+              transition={{
+                duration: 18,
+                repeat: Infinity,
+              }}
               src={BackgroundImg}
               alt="particle"
               top="50px"
@@ -135,16 +141,16 @@ const Showcase = () => {
               rotate="0deg"
             />
             <Particle
-                as={motion.img}
-                animate={{
-                  y: [0, -100, 0],
-                  rotate: 360,
-                  scale: [1, 0.9, 1],
-                }}
-                transition={{
-                  duration: 15,
-                  repeat: Infinity,
-                }}
+              as={motion.img}
+              animate={{
+                y: [0, -100, 0],
+                rotate: 360,
+                scale: [1, 0.9, 1],
+              }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+              }}
               src={BackgroundImg}
               alt="particle"
               bottom="10px"

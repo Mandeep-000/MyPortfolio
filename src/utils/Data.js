@@ -1,5 +1,6 @@
 import { FaJava } from 'react-icons/fa';
-import { SiJavascript, SiExpress, SiMongodb, SiGit, SiCss3, SiHtml5, SiReact, SiNodedotjs, SiGithub } from 'react-icons/si';
+import { SiJavascript, SiExpress, SiMongodb, SiGit, SiCss3, SiHtml5, SiReact, SiNodedotjs, SiGithub, SiLinkedin } from 'react-icons/si';
+import { IoMdMail } from "react-icons/io";
 
 import VD from '../assets/VD2.png';
 import Chappy from '../assets/chappy-small.png';
@@ -139,5 +140,29 @@ export const navLinks = [
         id: 4,
         name: 'Contact Me',
         href: 'Contact',
+    },
+]
+
+export const Social = [
+    {
+        id: 0,
+        name: 'LinkedIn',
+        text: 'linkedin.com/in/mandeep-pareek',
+        path: 'https://linkedin.com/in/mandeep-pareek',
+        icon: <SiLinkedin/>
+    },
+    {
+        id: 1,
+        name: 'GitHub',
+        text: 'github.com/mandeep-000',
+        path: 'https://github.com/mandeep-000',
+        icon: <SiGithub/>
+    },
+    {
+        id: 2,
+        name: 'Email',
+        text: 'p.mandeep0402@gmail.com',
+        path: 'https://mail.google.com/mail/?view=cm&to=p.mandeep0402@gmail.com',
+        icon: <IoMdMail/>
     },
 ]
