@@ -19,11 +19,11 @@ const Footer = () => {
     <div style={{background:"rgba(0,0,0,0.5)"}}>
       <HorizontalLine></HorizontalLine>
       <PaddingContainer id="Contact" top="2%" bottom="3%" left="3%" right="3%">
-        <FlexContainer gap="6rem" justify="center" responsiveFlex>
+        <FlexContainer gap="6rem" justify="center" responsiveFlex responsiveGap="1rem" responsiveDirection="column" responsiveJustify="center" responsivePlace="center">
           <FlexContainer as={motion.div}
               variants={fadeInLeftVariant}
               initial="hidden"
-              whileInView="visible" direction="column" width="33%" responsiveFlex>
+              whileInView="visible" direction="column" width="40%" responsiveWidth="100%" responsiveFlex responsivePlace="center">
             <Heading
               size="h3"
               align="left"

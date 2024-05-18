@@ -3,11 +3,16 @@ import { TextCard } from "./About.styled";
 
 export const MainBody = styled.div`
   background-color: ${({theme})=> theme.colors.primary};
+  /* position: relative; */
+
+  @media(max-width: ${({theme})=> theme.breakpoints.minipc}){
+    position: relative;
+  }
 `;
 
 export const Container = styled.div`
 width: 90%;
-max-width: 1280px;
+/* max-width: 1280px; */
 margin: auto;
 `
 
@@ -41,8 +46,11 @@ flex-wrap: ${({wrap})=> wrap};
 
 @media(max-width: ${({theme})=> theme.breakpoints.mobile}){
     display: ${({ responsiveFlex })=> responsiveFlex? 'flex': 'block'};
-
+    gap: ${({responsiveGap})=> responsiveGap};
+    width: ${({responsiveWidth})=> responsiveWidth};
     flex-direction: ${({ responsiveDirection })=> responsiveDirection};
+    justify-content: ${({responsiveJustify})=> responsiveJustify};
+    place-items: ${({responsivePlace})=> responsivePlace};
 }
 `
 
